@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script>
+
+	var age = 20;
+	if (age >= 18){
+    	alert('adult');
+	}else{
+		console.log('age < 18'); // 添加一行日志
+    	alert('teenager');
+	}
+
+	var m = new Map(); // 空Map
+	m.set('Adam', 67); // 添加新的key-value
+	m.set('Bob', 59);
+	m.has('Adam'); // 是否存在key 'Adam': true
+	m.get('Adam'); // 67
+	m.delete('Adam'); // 删除key 'Adam'
+	m.get('Adam'); // undefined
+
+	var s = new Set([1, 2, 3, 3, '3']);
+	s; // Set {1, 2, 3, "3"}
+	//set自动过滤所有相同元素
+	s.add(4)//增加一个元素
+	s.delete(3);//删除一个元素
+
+	//函数
+	function abs(x) {
+	    if (x >= 0) {
+	        return x;
+	    } else {
+	        return -x;
+	    }
+	}
+	
+	function abs(x) {
+	    if (typeof x !== 'number') {
+	        throw 'Not a number';
+	    }
+	    if (x >= 0) {
+	        return x;
+	    } else {
+	        return -x;
+	    }
+	}
+
+	function foo(x) {
+	    alert(x); // 10
+	    for (var i=0; i<arguments.length; i++) {
+	        alert(arguments[i]); // 10, 20, 30
+	    }
+	}
+	foo(10, 20, 30);
+
+
+
+</script>
+	<title></title>
+</head>
+<body>
+</body>
+</html>
